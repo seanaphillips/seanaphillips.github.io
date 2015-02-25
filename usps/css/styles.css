@@ -1,0 +1,195 @@
+/* browser reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Custom styles*/
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+body {
+	font-family: tahoma;
+	font-weight: 200;
+	line-height: 1.2;
+}
+
+header{
+background-color: hsl(202,91%,87%);
+overflow: hidden;
+}
+
+header img {
+	display:block;
+	width: 300px;
+	margin:10px auto;
+	background-image: white;
+	padding: 10px;
+}
+
+header li {
+display: inline-block;
+width:25%;
+float: left;
+text-align: center;
+padding:10px 20px;
+}
+header li a{
+	position: relative;
+	display:block;
+	padding: 10px 20px;
+	background-color: hsl(202,91%,80%);
+	border: 1px solid:hsl(202,91%,70%);
+	border-radius: 5px;
+	color: white;
+	text-decoration: no;
+}
+header li a:hover{
+	background-color: hsl(202,91%,85%);
+	border: 1px solid: hsl(202,91%,75%);
+	transition: all 250ms ease-in-out;
+	overflow: hidden;
+}
+
+.hero{
+height: 200px;
+background-image: url('../img/sky.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+main{
+background-color: hsl(0,0%,92%);
+position: relative;
+}
+
+main img{
+	position:absolute;
+	top:20px;
+	width:25%;
+	border-radius: 50%;
+	left: 15px;
+	z-index: 1;
+	transition: left 250ms ease-in-out;
+
+}
+main img:hover{
+left:5%;
+z-index: 3;
+}
+article{
+	position: relative;
+	z-index: 2;
+	width: 75%;
+	float:right;
+	background-color: white;
+	padding: 0 20px 40px;
+	margin-bottom: 60px;
+	margin-right: 5%;
+	
+}
+article::before{
+	content: "";
+	background: white;
+	display: block;
+	height: 100px;
+	width: 100%;
+	top:-100px;
+	left: 0;
+	background-repeat: repeat-x;
+	background-image: url("../img/mail.png");
+}
+h1{
+font-size: 40px;
+margin-bottom: 40px;
+}
+
+h2{
+font-size: 30px;
+margin: 20px 0;
+}
+
+p{
+font-size: 24px;
+margin:10px 0;
+}
+
+footer{
+clear:both;
+background-color: hsl(0,0%,20%);
+padding: 20px;
+color: white;
+font-size: 80%;
+}
+.shine::after{
+content: "";
+position: absolute;
+top:-50%;
+right:-50%;
+bottom:-50%;
+left: -50%;
+background-image: linear-gradient(to bottom, rgba(229,172,142,0), rgba(255,255,255,0.5), rgba(229,172,142,0));
+transform: rotateZ(60deg) translate(-5em, 10em);
+-webkit-transform:rotateZ(60deg) translate(-5em, 10em);
+}
+.shine:hover::after, .shine:focus::after{
+	animation: sheen 1s forwards;
+	-webkit-animation: sheen 1s forwards;
+}
+@keyframes sheen{
+	100%{
+		transform rotateZ(60deg) translate:(1em, -5em);
+	}
+}
+@-webkit-keyframes sheen{
+	100%{
+		transform rotateZ(60deg) translate:(1em, -5em);
+	}
+}
